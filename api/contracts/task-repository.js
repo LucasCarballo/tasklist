@@ -8,14 +8,14 @@ module.exports = class TaskRepository {
     }
 
     getTasks(quantity) {
-        return Promise.reject(new Error('not implemented'))
+        return Promise.reject(new Error('not implemented'));
     }
 
     addTasks(tasks) {
-        return Promise.reject(new Error('not implemented'))
+        return Promise.reject(new Error('not implemented'));
     }
     
     setAsDone(id) {
-        return Promise.reject(new Error('not implemented'))
+        return Promise.reject(new Error('not implemented'));
     }
 }
