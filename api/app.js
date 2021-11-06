@@ -1,3 +1,6 @@
+const dotenv = require('dotenv');
+dotenv.config();
+
 const express = require('express');
 const routes = require('./drivers/web/routes');
 const projectDependencies = require('./config/dependencies');
