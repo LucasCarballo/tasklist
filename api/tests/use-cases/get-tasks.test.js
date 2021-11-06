@@ -1,6 +1,7 @@
 const TaskRepository = require('../../contracts/task-repository');
 const TasksProvider = require('../../contracts/tasks-provider');
 const getTasksUseCase = require('../../use-cases/get-tasks');
+const jest = require('jest');
 
 jest.mock('../../contracts/task-repository');
 jest.mock('../../contracts/tasks-provider');
@@ -9,7 +10,7 @@ describe('get-tasks', () => {
     it ('when existent tasks are greater or equal than quantity requested will not call tasksProvider', async () => {
         TaskRepository.mockImplementation(() => {
             return {
-                getTasks: (quantity) => {
+                getTasks: (_quantity) => {
                     return [
                         {
                             id: 'someId',
@@ -35,7 +36,7 @@ describe('get-tasks', () => {
     it ('when quantity is greater than existent tasks get tasks from provider and returns all', async () => {
         TaskRepository.mockImplementation(() => {
             return {
-                getTasks: (quantity) => {
+                getTasks: (_quantity) => {
                     return [
                         {
                             id: 'someId',
@@ -43,7 +44,7 @@ describe('get-tasks', () => {
                         }
                     ]
                 },
-                addTasks: (tasks) => {
+                addTasks: (_tasks) => {
                     return [
                         {
                             id: 'id2',
@@ -58,7 +59,7 @@ describe('get-tasks', () => {
         
         TasksProvider.mockImplementation(() => {
             return {
-                get: (quantity) => {
+                get: (_quantity) => {
                     return [
                         {
                             title: 'other random title'
