@@ -1,7 +1,6 @@
 const TaskRepository = require('../../contracts/task-repository');
 const TasksProvider = require('../../contracts/tasks-provider');
 const getTasksUseCase = require('../../use-cases/get-tasks');
-const jest = require('jest');
 
 jest.mock('../../contracts/task-repository');
 jest.mock('../../contracts/tasks-provider');
