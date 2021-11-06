@@ -4,6 +4,6 @@ module.exports = class Database {
     }
 
     initDatabase() {
-        return Promise.reject(new Error('not implemented'));
+        return new Error('not implemented');
     }
 }

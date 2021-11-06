@@ -1,5 +1,5 @@
-const getTasksUseCase = require('../../use-cases/get-tasks')
-const completeTaskUseCase = require('../../use-cases/complete-task')
+const getTasksUseCase = require('../../use-cases/get-tasks');
+const completeTaskUseCase = require('../../use-cases/complete-task');
 
 module.exports = (dependencies) => {
     const { taskRepository } = dependencies.databaseService;

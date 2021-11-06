@@ -6,8 +6,4 @@ module.exports = class InMemoryDatabase extends Database {
         super();
         this.taskRepository = new InMemoryTaskRepository();
     }
-
-    async initDatabase() {
-        
-    }
 }

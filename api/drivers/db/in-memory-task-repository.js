@@ -1,5 +1,5 @@
-const TaskRepository = require('../../contracts/task-repository')
-const { v4: uuidv4 } = require('uuid')
+const TaskRepository = require('../../contracts/task-repository');
+const { v4: uuidv4 } = require('uuid');
 
 module.exports = class InMemoryTaskRepository extends TaskRepository {
     constructor() {
@@ -11,7 +11,7 @@ module.exports = class InMemoryTaskRepository extends TaskRepository {
         try {
             return this.tasks.find(t => t.id === id);
         } catch (ex) {
-            throw new Error(`Unexpected error at InMemoryTaskRepository.getTask, ${error}`)
+            throw new Error(`Unexpected error at InMemoryTaskRepository.getTask, ${error}`);
         }
     }
 
@@ -19,7 +19,7 @@ module.exports = class InMemoryTaskRepository extends TaskRepository {
         try {
             return this.tasks.slice(-quantity);
         } catch (error) {
-            throw new Error(`Unexpected error at InMemoryTaskRepository.getTasks, ${error}`)
+            throw new Error(`Unexpected error at InMemoryTaskRepository.getTasks, ${error}`);
         }
     }
 
@@ -37,7 +37,7 @@ module.exports = class InMemoryTaskRepository extends TaskRepository {
 
             return tasksToAdd;
         } catch (error) {
-            throw new Error(`Unexpected error at InMemoryTaskRepository.addTasks, ${error}`)
+            throw new Error(`Unexpected error at InMemoryTaskRepository.addTasks, ${error}`);
         }
     }
 
@@ -52,7 +52,7 @@ module.exports = class InMemoryTaskRepository extends TaskRepository {
 
             return undefined;
         } catch (error) {
-            throw new Error(`Unexpected error at InMemoryTaskRepository.setAsDone, ${error}`)
+            throw new Error(`Unexpected error at InMemoryTaskRepository.setAsDone, ${error}`);
         }
     }
 }

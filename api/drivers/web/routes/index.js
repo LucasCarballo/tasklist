@@ -1,5 +1,5 @@
-const express = require('express')
-const tasks = require('./tasks')
+const express = require('express');
+const tasks = require('./tasks');
 
 const apiRouter = (dependencies) => {
     const routes = express.Router();
